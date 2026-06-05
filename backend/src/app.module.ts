@@ -6,6 +6,7 @@ import { UsersModule } from './modules/users/users.module';
 import { StorageModule } from './modules/storage/storage.module';
 import { FoldersModule } from './modules/folders/folders.module';
 import { ShareModule } from './modules/share/share.module';
+import { HealthController } from './modules/health.controller';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ShareModule } from './modules/share/share.module';
     FoldersModule,
     ShareModule,
   ],
+  controllers: [HealthController],
   providers: [PrismaService],
   exports: [PrismaService],
 })
